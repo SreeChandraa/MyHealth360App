@@ -1,0 +1,24 @@
+<ion-header>
+  </ion-header>
+  <ion-content padding>
+      <ion-list>
+      <ion-item>
+         <ion-label>Card Number</ion-label>
+         <ion-input type="tel" placeholder="Enter Card Number" [(ngModel)]="cardnum">
+          </ion-input>
+       </ion-item>
+        <ion-item>
+            <ion-label>CVV</ion-label>
+         <ion-input placeholder="CVV" type="password" [(ngModel)]="cvv">
+          </ion-input>
+        </ion-item>
+      <ion-item>
+          <ion-label>Amount to be paid : 500</ion-label>
+      </ion-item>
+        <ion-item>
+            <ion-label>Expiry Date</ion-label>
+            <ion-datetime displayFormat="MM/YYYY" [(ngModel)]="fromtime" min="2018-07-31"></ion-datetime>
+          </ion-item>
+      </ion-list> 
+      <button ion-button full (click)="presentToast()">PAY</button>
+  </ion-content>

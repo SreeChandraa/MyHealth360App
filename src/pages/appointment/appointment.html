@@ -1,0 +1,16 @@
+<ion-content padding>
+  <h5 ion-text color="dark">Dr.Sree Chandraa</h5>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Appointment Date</ion-label>
+      <ion-datetime displayFormat="MMM DD, YYYY HH:mm" pickerFormat="MMM DD, YYYY HH:mm"
+      min="2018-05-10" max="2018-12-31" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+
+  <button ion-button full (click)="paynow()">CONFIRM APPOINTMENT & PAYNOW</button>
+  <button ion-button full color="light" (click)="paylater()">CONFIRM APPOINTMENT & PAY LATER</button>
+
+</ion-content>

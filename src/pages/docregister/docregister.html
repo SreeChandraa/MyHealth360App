@@ -1,0 +1,78 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-title>Please register yourself</ion-title>
+    <ion-list>
+    <ion-item>
+       <ion-input placeholder="Name" [(ngModel)]="username">
+        </ion-input>
+     </ion-item>
+      <ion-item>
+       <ion-input placeholder="Password" type="password" [(ngModel)]="password">
+        </ion-input>
+     </ion-item>
+        
+    <ion-item>    
+    <ion-input type="tel" placeholder="Phone number" required></ion-input>
+     </ion-item>
+    
+     <ion-item>
+              <ion-label> Speciality</ion-label>
+              <ion-select [(ngModel)]="speciality" multiple="true">
+                <ion-option value="gen">General</ion-option>
+                <ion-option value="opthal">Opthalmologist</ion-option>
+                <ion-option value="derma">Dermatologist</ion-option>
+                <ion-option value="cardi">Cardiologist</ion-option>
+                <ion-option value="ent">ENT</ion-option>
+                <ion-option value="gyna">Gynacologist</ion-option>
+                <ion-option value="dent">Dentist</ion-option>
+                <ion-option value="psyc">Psycologist</ion-option>
+                <ion-option value="neut">Neutrionist</ion-option>
+                <ion-option value="ayur">Ayurvedic</ion-option>
+              </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-input placeholder="Qualification">
+         </ion-input>
+      </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Fees" type="tel">
+       </ion-input>
+    </ion-item>
+      <ion-item>
+          <ion-label>Available From Time</ion-label>
+          <ion-datetime displayFormat="HH:mm" [(ngModel)]="fromtime"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Available To Time</ion-label>
+            <ion-datetime displayFormat="HH:mm" [(ngModel)]="totime"></ion-datetime>
+          </ion-item>
+ 
+          <ion-item>
+              <ion-label>Available Days</ion-label>
+              <ion-select  multiple="true">
+                <ion-option value="mon">Monday</ion-option>
+                <ion-option value="tue">Tuesday</ion-option>
+                <ion-option value="wed">Wednesday</ion-option>
+                <ion-option value="thur">Thursday</ion-option>
+                <ion-option value="fri">Friday</ion-option>
+                <ion-option value="sat">Saturday</ion-option>
+                <ion-option value="sun">Sunday</ion-option>
+              </ion-select>
+            </ion-item>
+          <ion-item>    
+            <ion-input type="number" placeholder="Years of Experience" [(ngModel)]="yearsofexp" min="1" max="100"></ion-input>
+             </ion-item>
+                  
+    </ion-list> 
+    <button ion-button full (click)="register()">REGISTER</button>
+</ion-content>

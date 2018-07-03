@@ -1,0 +1,24 @@
+<!--
+  Generated template for the ListspecialistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content padding>
+<ion-searchbar
+  [(ngModel)]="myInput"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)">
+</ion-searchbar>
+    
+<button ion-item (click)="searchDoc()">
+    Search Specialists
+  </button>
+    
+ <button ion-item (click)="searchHosp()">
+    Search Hospitals
+  </button>
+        
+</ion-content>
